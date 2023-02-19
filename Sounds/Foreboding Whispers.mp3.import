@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Foreboding Whispers.mp3-c5a200d5c2a82634e7f0fb050e4c6971.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Foreboding Whispers.mp3"
+dest_files=[ "res://.import/Foreboding Whispers.mp3-c5a200d5c2a82634e7f0fb050e4c6971.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

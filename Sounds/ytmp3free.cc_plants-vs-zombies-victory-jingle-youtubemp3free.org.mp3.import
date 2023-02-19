@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ytmp3free.cc_plants-vs-zombies-victory-jingle-youtubemp3free.org.mp3-33006dbc49b4a3694ebc7740e343a4e3.mp3str"
+
+[deps]
+
+source_file="res://Sounds/ytmp3free.cc_plants-vs-zombies-victory-jingle-youtubemp3free.org.mp3"
+dest_files=[ "res://.import/ytmp3free.cc_plants-vs-zombies-victory-jingle-youtubemp3free.org.mp3-33006dbc49b4a3694ebc7740e343a4e3.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

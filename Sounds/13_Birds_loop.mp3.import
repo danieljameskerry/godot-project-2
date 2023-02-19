@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/13_Birds_loop.mp3-bcaac22bea46b8aebcc8476ed4bb41b9.mp3str"
+
+[deps]
+
+source_file="res://Sounds/13_Birds_loop.mp3"
+dest_files=[ "res://.import/13_Birds_loop.mp3-bcaac22bea46b8aebcc8476ed4bb41b9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

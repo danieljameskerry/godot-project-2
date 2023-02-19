@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Church Bell  Sound Effect.mp3-3944ae7a5c555af7dce32992e93e43e2.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Church Bell  Sound Effect.mp3"
+dest_files=[ "res://.import/Church Bell  Sound Effect.mp3-3944ae7a5c555af7dce32992e93e43e2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

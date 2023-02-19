@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Warp Sound Effect With Visuals.mp3-368814b0125e73f56536730db641e8c8.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Warp Sound Effect With Visuals.mp3"
+dest_files=[ "res://.import/Warp Sound Effect With Visuals.mp3-368814b0125e73f56536730db641e8c8.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0
