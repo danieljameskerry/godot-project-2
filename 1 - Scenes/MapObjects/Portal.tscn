@@ -1,0 +1,74 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://4 - Resources/MapObjects/greenPortal.tres" type="Texture" id=1]
+[ext_resource path="res://2 - Scripts/MapObjects/Portal.gd" type="Script" id=2]
+[ext_resource path="res://3 - Textures/UI/UiIcons.png" type="Texture" id=3]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Active"
+length = 0.8
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "HeadsUp"
+length = 1.2
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath("HeadsUpArrow:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( -12, -0.25, 0, 0.25, 0, -8, -0.25, 0, 0.25, 0, -12, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.6, 1.2 )
+}
+
+[sub_resource type="Animation" id=3]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[node name="Portal" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 8, 8 )
+texture = ExtResource( 1 )
+vframes = 5
+
+[node name="HeadsUpArrow" type="Sprite" parent="."]
+visible = false
+position = Vector2( 8, -11.0684 )
+texture = ExtResource( 3 )
+hframes = 4
+vframes = 12
+frame = 19
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "Inactive"
+anims/Active = SubResource( 1 )
+anims/HeadsUp = SubResource( 2 )
+anims/Inactive = SubResource( 3 )

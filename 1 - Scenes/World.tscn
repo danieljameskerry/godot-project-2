@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://4 - Resources/Ground.tres" type="TileSet" id=1]
+[ext_resource path="res://2 - Scripts/World.gd" type="Script" id=2]
+[ext_resource path="res://2 - Scripts/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://1 - Scenes/UI/UserInterface.tscn" type="PackedScene" id=4]
+[ext_resource path="res://2 - Scripts/AStarPath.gd" type="Script" id=5]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 800, 800 )
+current = true
+zoom = Vector2( 1.6, 1.6 )
+script = ExtResource( 3 )
+zoom_factor = 1.2
+max_speed = 12
+
+[node name="Tween" type="Tween" parent="Camera2D"]
+
+[node name="Ground" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 16, 16 )
+format = 1
+script = ExtResource( 5 )
+
+[node name="YSort" type="YSort" parent="."]
+pause_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="UserInterface" parent="CanvasLayer" instance=ExtResource( 4 )]
+
+[connection signal="building_selected" from="CanvasLayer/UserInterface" to="." method="_on_UserInterface_building_selected"]

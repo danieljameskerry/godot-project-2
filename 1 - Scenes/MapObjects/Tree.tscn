@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://3 - Textures/World/Trees.png" type="Texture" id=1]
+[ext_resource path="res://2 - Scripts/MapObjects/Tree.gd" type="Script" id=2]
+[ext_resource path="res://2 - Scripts/Clock.gd" type="Script" id=3]
+
+[node name="Tree" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 9, 6 )
+texture = ExtResource( 1 )
+hframes = 4
+frame = 1
+
+[node name="Clock" type="Timer" parent="."]
+wait_time = 40.0
+one_shot = true
+script = ExtResource( 3 )
+
+[connection signal="timeout" from="Clock" to="." method="regrow"]

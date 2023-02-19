@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://1 - Scenes/Buildings/WorkerBuilding.tscn" type="PackedScene" id=1]
+[ext_resource path="res://4 - Resources/Buildings/lumbermill.tres" type="Texture" id=2]
+[ext_resource path="res://2 - Scripts/Buildings/Lumbermill.gd" type="Script" id=3]
+[ext_resource path="res://3 - Textures/UI/highlight.png" type="Texture" id=4]
+
+[node name="Lumbermill" instance=ExtResource( 1 )]
+script = ExtResource( 3 )
+id = "Lumbermill"
+description = "Assign workers to chop down nearby trees and produce wood."
+upgrade_tooltips = [ "x2 yield", "+2 range", "+2 max workers", "x2 yield" ]
+operating_radius = 3
+
+[node name="Radius" type="Sprite" parent="." index="0"]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 8, 8 )
+texture = ExtResource( 4 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 48, 48 )
+
+[node name="Sprite" parent="." index="1"]
+texture = ExtResource( 2 )

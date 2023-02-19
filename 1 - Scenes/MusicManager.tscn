@@ -1,0 +1,69 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://Sounds/Undertale OST Dating Start!.mp3" type="AudioStream" id=1]
+[ext_resource path="res://1 - Scenes/MusicManager.gd" type="Script" id=2]
+[ext_resource path="res://Sounds/Modern12.mp3" type="AudioStream" id=3]
+[ext_resource path="res://Sounds/Modern10.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Sounds/Modern11.mp3" type="AudioStream" id=5]
+[ext_resource path="res://Sounds/Modern13.mp3" type="AudioStream" id=6]
+[ext_resource path="res://Sounds/Retro10.mp3" type="AudioStream" id=7]
+[ext_resource path="res://Sounds/place.mp3" type="AudioStream" id=8]
+[ext_resource path="res://Sounds/13_Birds_loop.mp3" type="AudioStream" id=9]
+[ext_resource path="res://Sounds/Warp Sound Effect With Visuals.mp3" type="AudioStream" id=10]
+[ext_resource path="res://Sounds/Foreboding Whispers.mp3" type="AudioStream" id=11]
+[ext_resource path="res://Sounds/Church Bell  Sound Effect.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Sounds/ytmp3free.cc_plants-vs-zombies-victory-jingle-youtubemp3free.org.mp3" type="AudioStream" id=13]
+
+[node name="MusicManager" type="Node2D"]
+pause_mode = 2
+script = ExtResource( 2 )
+
+[node name="MenuMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+bus = "Music"
+
+[node name="WorldAmbience" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+bus = "Music"
+
+[node name="RaidMusic" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+bus = "Music"
+
+[node name="RaidWarning" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+bus = "SFX"
+
+[node name="VictoryJingle" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+bus = "Music"
+
+[node name="PortalOpen" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+bus = "SFX"
+
+[node name="ButtonClickForward" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+bus = "SFX"
+
+[node name="ButtonClickBack" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+bus = "SFX"
+
+[node name="ButtonPlay" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 3 )
+bus = "SFX"
+
+[node name="ButtonSpeedUp" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+pitch_scale = 1.1
+bus = "SFX"
+
+[node name="Start" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+bus = "SFX"
+
+[node name="Place" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+bus = "SFX"

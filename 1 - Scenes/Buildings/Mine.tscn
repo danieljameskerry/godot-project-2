@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://4 - Resources/Buildings/mine.tres" type="Texture" id=1]
+[ext_resource path="res://1 - Scenes/Buildings/WorkerBuilding.tscn" type="PackedScene" id=2]
+[ext_resource path="res://2 - Scripts/Buildings/Mine.gd" type="Script" id=3]
+
+[node name="Mine" instance=ExtResource( 2 )]
+script = ExtResource( 3 )
+id = "Mine"
+description = "Assign workers to produce stone every 10 seconds."
+upgrade_tooltips = [ "x2 yield", "+2 max workers", "yields metal", "x2 yield" ]
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 1 )

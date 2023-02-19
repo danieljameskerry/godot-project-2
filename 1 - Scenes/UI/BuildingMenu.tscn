@@ -1,0 +1,148 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://4 - Resources/CustomFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://2 - Scripts/UI/BuildingMenu.gd" type="Script" id=2]
+
+[node name="BuildingMenu" type="Control"]
+anchor_left = 0.733
+anchor_top = 0.119
+anchor_right = 0.967
+anchor_bottom = 0.711
+script = ExtResource( 2 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0, 0, 0, 0.501961 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = -16.0
+margin_bottom = -8.0
+
+[node name="TextContent" type="VBoxContainer" parent="VBoxContainer"]
+margin_right = 417.0
+margin_bottom = 412.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 2.0
+
+[node name="Title" type="Label" parent="VBoxContainer/TextContent"]
+margin_right = 417.0
+margin_bottom = 53.0
+custom_fonts/font = ExtResource( 1 )
+text = "Building"
+align = 1
+
+[node name="Level" type="Label" parent="VBoxContainer/TextContent"]
+margin_top = 57.0
+margin_right = 417.0
+margin_bottom = 129.0
+rect_min_size = Vector2( 0, 72 )
+custom_fonts/font = ExtResource( 1 )
+text = "Level 0"
+align = 1
+
+[node name="Description" type="Label" parent="VBoxContainer/TextContent"]
+margin_top = 133.0
+margin_right = 417.0
+margin_bottom = 242.0
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+text = "This is a building, no description needed."
+align = 1
+autowrap = true
+
+[node name="Assignment" type="Label" parent="VBoxContainer/TextContent"]
+visible = false
+margin_top = 246.0
+margin_right = 417.0
+margin_bottom = 402.0
+rect_min_size = Vector2( 0, 156 )
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 1 )
+text = "Workers assigned: 0/2"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="Buttons" type="VBoxContainer" parent="VBoxContainer"]
+margin_top = 416.0
+margin_right = 417.0
+margin_bottom = 623.0
+size_flags_vertical = 3
+alignment = 1
+
+[node name="RepairButton" type="Button" parent="VBoxContainer/Buttons"]
+visible = false
+margin_top = 42.0
+margin_right = 417.0
+margin_bottom = 101.0
+expand_icon = true
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/Buttons/RepairButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+grow_horizontal = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Buttons/RepairButton/HBox"]
+margin_left = 136.0
+margin_right = 280.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 88, 64 )
+size_flags_vertical = 1
+text = "Repair:"
+valign = 1
+
+[node name="UpgradeButton" type="Button" parent="VBoxContainer/Buttons"]
+margin_top = 74.0
+margin_right = 417.0
+margin_bottom = 133.0
+hint_tooltip = "Level 2: +1 range"
+expand_icon = true
+
+[node name="HBox" type="HBoxContainer" parent="VBoxContainer/Buttons/UpgradeButton"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -2.0
+grow_horizontal = 2
+mouse_filter = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 14
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/Buttons/UpgradeButton/HBox"]
+margin_left = 119.0
+margin_right = 298.0
+margin_bottom = 64.0
+rect_min_size = Vector2( 88, 64 )
+size_flags_vertical = 1
+text = "Upgrade:"
+valign = 1
+
+[node name="WorkerButtons" type="VBoxContainer" parent="VBoxContainer/Buttons"]
+visible = false
+margin_top = 74.0
+margin_right = 417.0
+margin_bottom = 196.0
+
+[node name="GotoButton" type="Button" parent="VBoxContainer/Buttons/WorkerButtons"]
+margin_right = 417.0
+margin_bottom = 59.0
+text = "Go to Worker"
+
+[node name="AssignButton" type="Button" parent="VBoxContainer/Buttons/WorkerButtons"]
+margin_top = 63.0
+margin_right = 417.0
+margin_bottom = 122.0
+text = "Assign Worker"

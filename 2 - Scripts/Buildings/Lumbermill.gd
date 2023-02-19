@@ -1,0 +1,2 @@
+extends CollectorBuilding
+class_name Lumbermill
